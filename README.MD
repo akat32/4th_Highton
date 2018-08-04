@@ -23,17 +23,13 @@
 
     HTTP 500 : {message : "ERR!"}
 
-* POST /auth/signup : User register
+* POST /auth/signin : User register
 
 > Params
 
     id : User's ID [String]
 
     passwd : User's passwd [String]
-
-    name : User's name [String]
-
-    phone : User's Phone_number [String]
 
 > Response
 
