@@ -17,6 +17,7 @@ module.exports = (router, Users, rndstring)=>{
       if(e instanceof ValidationError) return res.status(400).json({message: e.message});
       if(e instanceof paramsError) return res.status(400).json({message: e.message});
     }
+    return res.status(200).json({message : "success!"});
   })
   .post('/aa', async(req,res)=>{
     var result = await Users.find()
