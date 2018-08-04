@@ -83,3 +83,19 @@
     HTTP 200 : [{ 옷 리스트 }]
 
     HTTP 404 : {message : "Item not found!"}
+
+* POST /buy/bucket/add
+
+> Params
+
+    itemToken : Item's token
+
+    userToken : User's token
+
+> Response
+
+    HTTP 200 : {message : "success!"}
+
+    HTTP 404 : {message : "Item not found!"}
+
+    HTTP 500 : {message : "ERR!"}

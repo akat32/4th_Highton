@@ -15,13 +15,6 @@ var UsersSchema = mongoose.Schema({
   phone : {type : String},
   token  : {type : String},
   account : {type : String},
-  jjim : [{
-    img : {type : String},
-    name : {type : String},
-    price : {type : String},
-    size : {type : String},
-    company : {type : String}
-  }],
   basket : [{
     img : {type : String},
     name : {type : String},
