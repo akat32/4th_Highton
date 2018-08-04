@@ -49,3 +49,37 @@
     HTTP 200 : User's info json
 
     HTTP 404 : {message : "User not found!"}
+
+* POST /item/input
+
+> Params
+
+    img : Item's img file
+
+    name : Item's name,
+
+    price : Item's price,
+
+    size : Item's size,
+
+    company : company's name,
+
+    season : 원하는 옷의 계절
+
+> Response
+
+    HTTP 200 : {message : "success!"}
+
+    HTTP 500 : {message : "ERR!"}
+
+* POST /item/list
+
+> Params
+
+    season : 원하는 옷의 계절
+
+> Response
+
+    HTTP 200 : [{ 옷 리스트 }]
+
+    HTTP 404 : {message : "Item not found!"}
