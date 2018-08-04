@@ -36,3 +36,16 @@
     HTTP 200 : User's info json
 
     HTTP 404 : {message : "User not found!"}
+
+* GET /auth/auto/:token : User register
+
+> Params
+
+    token : User's token
+
+    ex:) /auto/D5qS3kxBAavQiaNrdZav1au
+> Response
+
+    HTTP 200 : User's info json
+
+    HTTP 404 : {message : "User not found!"}
