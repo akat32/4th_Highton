@@ -5,7 +5,7 @@ module.exports = (router, Users, rndstring)=>{
   .post('/signin', async (req,res)=>{
     var result = await Users.findOne(req.body);
     if(!result) return res.status(404).json({message : "User not found!"})
-    else return res.status(200).json(result)
+    else return res.status(200).json({token : result.token})
   })
   .post('/signup', async (req,res)=>{
     var new_user = new Users(req.body);

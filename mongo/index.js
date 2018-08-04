@@ -36,7 +36,9 @@ var ItemsSchema = mongoose.Schema({
   price : {type : String},
   size : {type : String},
   company : {type : String},
-  rating : {type : Number}
+  rating : {type : Number},
+  token : {type : String},
+  season : {type : String}
 })
 // 이미지, 옷이름, 가격, 사이즈, 회사, 구매 횟수
 Users = mongoose.model('users', UsersSchema);

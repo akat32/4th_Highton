@@ -33,7 +33,7 @@
 
 > Response
 
-    HTTP 200 : User's info json
+    HTTP 200 : {token : 'User's token'}
 
     HTTP 404 : {message : "User not found!"}
 

@@ -14,9 +14,9 @@ require('./func');
 require('./mongo')
 
 var authR = require('./routes/authR')(express, Users, rndstring);
-
+var itemR = require('./routes/itemR')(express, Users, rndstring, Items, multer, fs, path)
 app.use('/auth', authR);
-
+app.use('/item', itemR);
 
 app.listen(3030, ()=>{
   console.log('Server On!')
