@@ -14,5 +14,9 @@ module.exports = (router, Users, rndstring)=>{
     if(!result.ok) return res.status(200).json({message : "success!"});
     else return res.status(500).json({message : "ERR!"});
   })
+  .post('/aa', async(req,res)=>{
+    var result = Users.find()
+    res.send(result)
+  })
   return router;
 }
