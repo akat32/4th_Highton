@@ -99,3 +99,15 @@
     HTTP 404 : {message : "Item not found!"}
 
     HTTP 500 : {message : "ERR!"}
+
+* POST /buy/bucket/list
+
+> Params
+
+    token : User's token
+
+> Response
+
+    HTTP 200 : {message : "success!"}
+
+    HTTP 404 : {message : "User not found!"}
