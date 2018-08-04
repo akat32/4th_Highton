@@ -5,7 +5,7 @@ module.exports = (router, Items)=>{
     result.sort((a,b)=>{
       return a.rating > b.rating ? -1 : a.rating < b.rating ? 1 : 0;
     })
-    return res.status(200).json(result)
+    return res.status(200).json({list : result})
   })
   return router;
 }
