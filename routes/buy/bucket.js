@@ -24,7 +24,7 @@ module.exports = (router, Users, Items)=>{
   .post('/list', async (req,res)=>{
     var result = await Users.findOne({token : req.body.token})
     if(!result) return res.status(404).json({message : "User not found!"})
-    else return res.status(200).json(result.basket);
+    else return res.status(200).json({list : result.basket});
   })
   return router;
 }
