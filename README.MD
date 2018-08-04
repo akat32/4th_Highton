@@ -43,7 +43,7 @@
 
     token : User's token
 
-    ex:) /auto/D5qS3kxBAavQiaNrdZav1au
+    ex:) /auth/auto/D5qS3kxBAavQiaNrdZav1au
 > Response
 
     HTTP 200 : User's info json
