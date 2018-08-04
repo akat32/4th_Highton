@@ -19,7 +19,7 @@
 
     HTTP 200 : {message : "success!"}
 
-    HTTP 412 : User duplicate
+    HTTP 412 : {message:"already exist"} // 유저 중복
 
     HTTP 500 : {message : "ERR!"}
 

@@ -10,9 +10,13 @@ module.exports = (router, Users, rndstring)=>{
   .post('/signup', async (req,res)=>{
     var new_user = new Users(req.body);
     new_user.token = rndstring.generate(23);
-    var result = await new_user.save();
-    if(!result.ok) return res.status(200).json({message : "success!"});
-    else return res.status(500).json({message : "ERR!"});
+    try{
+      var result = await new_user.save();
+    }catch(e){
+      if(e instanceof user_duplicate) return res.status(409).json({message:"already exist"});
+      if(e instanceof ValidationError) return res.status(400).json({message: e.message});
+      if(e instanceof paramsError) return res.status(400).json({message: e.message});
+    }
   })
   .post('/aa', async(req,res)=>{
     var result = await Users.find()

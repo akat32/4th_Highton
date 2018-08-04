@@ -9,7 +9,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () { console.log("Mongo On"); });
 
 var UsersSchema = mongoose.Schema({
-  id : {type : String},
+  id : {type : String, unique : true},
   passwd : {type : String},
   name : {type : String},
   phone : {type : String},
@@ -42,7 +42,7 @@ var ItemsSchema = mongoose.Schema({
 Users = mongoose.model('users', UsersSchema);
 Items = mongoose.model('items', ItemsSchema);
 
-//require('./err')(UsersSchema);
+require('./err')(UsersSchema);
 
 exports.Users = Users;
 exports.Items = Items;

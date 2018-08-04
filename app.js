@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+require('./func');
 require('./mongo')
 
 var authR = require('./routes/authR')(express, Users, rndstring);
